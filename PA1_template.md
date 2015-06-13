@@ -234,3 +234,29 @@ After replacing the NA values, the mean remains the same. The median does change
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
+
+
+```r
+act2$weekday <- weekdays(as.Date(act2$date))
+
+avg_steps_interval_weekday <- sqldf("select avg(steps) avg_steps, interval 
+                                from act2 where weekday not in ('Saturday','Sunday') 
+                                group by interval order by interval")
+
+avg_steps_interval_weekend <- sqldf("select avg(steps) avg_steps, interval 
+                                from act2 where weekday in ('Saturday','Sunday') 
+                                group by interval order by interval")
+
+plot(avg_steps_interval_weekday$interval, avg_steps_interval_weekday$avg_steps, type="l", 
+     main="Weekdays vs Weekends: Average number of steps per 5 min intervals", 
+     xlab="Time of Day Format(5 minute interval in format HH24MI)", 
+     ylab="Average number of steps taken", col="blue")
+
+lines(avg_steps_interval_weekend$interval, avg_steps_interval_weekend$avg_steps, type="l", col="red")
+
+legend("topright", col = c("blue", "red"), legend = c("Weekdays", "Weekends"), lty=c(1,1), cex=1)
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
+
+Subject seems to wakeup and go to bed at similar times on weekdays and weekends. Seems to be more active during the morning on weekdays compared to weekends, and more active during the afternoons and nights on weekends compared to weekdays.
