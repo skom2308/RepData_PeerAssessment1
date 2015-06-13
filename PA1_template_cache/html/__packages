@@ -1,0 +1,8 @@
+base
+proto
+gsubfn
+DBI
+RSQLite
+sqldf
+knitr
+dplyr
