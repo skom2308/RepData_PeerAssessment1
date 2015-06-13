@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-The following packages are used for this analysis:
+The following package is used for this analysis:
 
 ```{r, warning=FALSE, message=FALSE}
 library("sqldf")
@@ -72,9 +72,9 @@ max_int <- sqldf("select max(avg_steps) max_avg_steps, interval from avg_steps_i
 print(max_int$interval)
 ```
 
-In conclusion, on average the interval `r max_int$interval` contains the maximum number of steps wit `r max_int$max_avg_steps` steps.
+In conclusion, on average the interval `r max_int$interval` contains the maximum number of steps with `r max_int$max_avg_steps` steps.
 
-## Imputing missing values
+## Inputing missing values
 
 The total number of missing values in the activity.csv dataset is:
 
