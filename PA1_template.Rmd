@@ -155,4 +155,4 @@ legend("topright", col = c("blue", "red"), legend = c("Weekdays", "Weekends"), l
 
 ```
 
-Subject to be more active during the morning on weekdays compared to weekends, and more active during the afternoons and nights on weekends compared to weekdays.
+Subject seems to be more active during the morning on weekdays compared to weekends, and more active during the afternoons and nights on weekends compared to weekdays.
