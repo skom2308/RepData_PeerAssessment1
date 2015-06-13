@@ -1,6 +1,6 @@
 # Reproducible Research: Peer Assessment 1
 
-The following packages are used for this analysis:
+The following package is used for this analysis:
 
 
 ```r
@@ -110,9 +110,9 @@ print(max_int$interval)
 ## [1] 835
 ```
 
-In conclusion, on average the interval 835 contains the maximum number of steps wit 206.1698113 steps.
+In conclusion, on average the interval 835 contains the maximum number of steps with 206.1698113 steps.
 
-## Imputing missing values
+## Inputing missing values
 
 The total number of missing values in the activity.csv dataset is:
 

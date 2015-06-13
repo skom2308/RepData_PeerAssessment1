@@ -64,7 +64,7 @@ img {
 </div>
 
 
-<p>The following packages are used for this analysis:</p>
+<p>The following package is used for this analysis:</p>
 <pre class="r"><code>library(&quot;sqldf&quot;)</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
@@ -118,10 +118,10 @@ plot(avg_steps_interval$interval, avg_steps_interval$avg_steps, type=&quot;l&quo
 <pre class="r"><code>max_int &lt;- sqldf(&quot;select max(avg_steps) max_avg_steps, interval from avg_steps_interval&quot;)
 print(max_int$interval)</code></pre>
 <pre><code>## [1] 835</code></pre>
-<p>In conclusion, on average the interval 835 contains the maximum number of steps wit 206.1698113 steps.</p>
+<p>In conclusion, on average the interval 835 contains the maximum number of steps with 206.1698113 steps.</p>
 </div>
-<div id="imputing-missing-values" class="section level2">
-<h2>Imputing missing values</h2>
+<div id="inputing-missing-values" class="section level2">
+<h2>Inputing missing values</h2>
 <p>The total number of missing values in the activity.csv dataset is:</p>
 <pre class="r"><code>sum(is.na(act$steps))</code></pre>
 <pre><code>## [1] 2304</code></pre>
